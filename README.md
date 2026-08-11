@@ -50,7 +50,7 @@ The analysis progresses from exploratory data analysis to business questions, ad
 - Luxury Car and Luxury SUV segments showed the highest loss ratios.
 - High Value - High Risk customers represented an important value-risk segment.
 - Approximately 28% of customers accounted for 50% of total claim costs.
-- Washington and California showed loss ratios above the overall portfolio level.
+- Customers residing in Washington and California showed loss ratios above the overall portfolio level.
 
 ## Recommendations
 - Review pricing and underwriting for vehicle classes with elevated loss ratios.
