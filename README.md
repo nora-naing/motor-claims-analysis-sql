@@ -61,6 +61,7 @@ The analysis progresses from exploratory data analysis to business questions, ad
 ## Limitations
 - Each customer appears only once in the dataset, so repeat-claim behavior and customer-level claim frequency cannot be analyzed reliably.
 - No claim occurrence date is available, so claim trends over time cannot be analyzed reliably.
+- Customer and vehicle risk segments are relative to this dataset and should not be treated as universal insurance risk thresholds.
 
 ## Database Schema
 ![Motor Claims EER Diagram](images/database_schema.png)
@@ -114,11 +115,30 @@ Summarizes the key findings, business recommendations, and analytical limitation
 - [View SQL: Business Insights](sql/05_business_insights.sql)
 
 ## Selected Analysis Results
+### Vehicle Claim Cost Contribution
+Four-Door Cars account for approximately 41% of total claim costs.
+
 ![Vehicle Claim Contribution](images/vehicle_claim_contribution.png)
-![State Risk Analysis](images/state_risk_analysis.png)
-![Claim Cost Concentration](images/claim_concentration.png)
+
+### Customer Risk Segmentation
+High Value - High Risk customers represent a segment with both strong customer value and elevated claim risk.
+
 ![Customer Risk Segmentation](images/customer_risk_segmentation.png)
+
+### Vehicle Risk Segmentation
+Luxury vehicle classes show higher loss ratios, highlighting potential areas for pricing and underwriting review.
+
 ![Vehicle Risk Segmentation](images/vehicle_risk_segmentation.png)
+
+### State Risk Analysis
+Washington and California have loss ratios above the overall portfolio level.
+
+![State Risk Analysis](images/state_risk_analysis.png)
+
+### Claim Cost Concentration
+Approximately 28% of customers account for 50% of total claim costs.
+
+![Claim Concentration](images/claim_concentration.png)
 
 ## Project Structure
 ```text
