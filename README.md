@@ -59,9 +59,8 @@ The analysis progresses from exploratory data analysis to business questions, ad
 - Use risk segmentation rather than applying broad portfolio-wide strategies.
 
 ## Limitations
-- One record per customer.
-- No transaction history available for customer lifetime value analysis.
-- No claim occurrence date field for trend analysis.
+- Each customer appears only once in the dataset, so repeat-claim behavior and customer-level claim frequency cannot be analyzed reliably.
+- No claim occurrence date is available, so claim trends over time cannot be analyzed reliably.
 
 ## Database Schema
 ![Motor Claims EER Diagram](images/database_schema.png)
