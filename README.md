@@ -18,23 +18,32 @@ The analysis progresses from exploratory data analysis to business questions, ad
 - MySQL Workbench
 - SQL
   
-## Skills Used
+## SQL Skills Demonstrated
+**Core SQL**
 - Relational data modeling
 - Primary and foreign keys
 - Fact and dimension tables
-- JOINs
-- Aggregations and GROUP BY
-- CASE expressions
+- `SELECT`
+- `JOIN`
+- `GROUP BY`
+- `HAVING`
+- `CASE`
 - Subqueries
-- CTEs
+- Aggregate functions
+
+
+**Advanced SQL**
+- Common Table Expressions (`CTEs`)
 - Window functions
-- RANK() and ROW_NUMBER()
-- NTILE() segmentation
-- Cumulative calculations
+- Ranking
+- `NTILE()`
+- `RANK()`
+- `ROW_NUMBER()`
+- Cumulative sums
 - Contribution analysis
-- Loss-ratio analysis
-- Customer risk segmentation
-- Data quality validation
+- Segmentation
+- Portfolio benchmarking
+- Loss ratio analysis
 
 ## Key Business Insights
 - Four-Door Cars contributed approximately 41% of total claim costs.
@@ -54,16 +63,18 @@ The analysis progresses from exploratory data analysis to business questions, ad
 - No transaction history available for customer lifetime value analysis.
 - No claim occurrence date field for trend analysis.
 
-## Project Structure
-### Database Schema
+## Database Schema
 ![Motor Claims EER Diagram](images/database_schema.png)
 
-- [Download Database Schama sql File](sql/01_create_database.sql)
+## Analysis Workflow
+The project is organized into five SQL files:
 
-### 1. Exploratory Data Analysis
-- [Download Exploratory Data Analysis sql File](sql/02_exploratory_data_analysis.sql)
+### 1. Database Creation
+Creates the database structure and relational tables.
+- [View SQL: Database Creation](sql/01_create_database.sql)
 
-Covered:
+### 2. Exploratory Data Analysis
+**Covered:**
 - Dataset overview
 - Data quality checks
 - Customer analysis
@@ -71,10 +82,10 @@ Covered:
 - Policy analysis
 - Vehicle analysis
 
-### 2. Business Questions
-- [Download Business Questions sql File](sql/03_business_questions.sql)
+- [View SQL: Exploratory Data Analysis](sql/02_exploratory_data_analysis.sql)
 
-Analyzed:
+### 3. Business Questions
+**Analyzed:**
 - Customer risk segments
 - Geographic claim costs
 - Income segments
@@ -84,10 +95,10 @@ Analyzed:
 - Vehicle class performance
 - Cross-dimensional risk patterns
 
-### 3. Advanced SQL Analysis
-- [Download Advanced Analysis sql File](sql/04_advanced_analysis.sql)
+- [View SQL: Business Questions](sql/03_business_questions.sql)
 
-Applied:
+### 4. Advanced SQL Analysis
+**Applied:**
 - CTEs
 - Window functions
 - Ranking
@@ -97,5 +108,36 @@ Applied:
 - Customer segmentation
 - Portfolio benchmarking
 
-### 4. Business Insights
-- [Download Business Insights sql File](sql/05_business_insights.sql)
+- [View SQL: Advanced Analysis](sql/04_advanced_analysis.sql)
+
+### 5. Business Insights
+Summarizes the key findings, business recommendations, and analytical limitations identified throughout the analysis.
+- [View SQL: Business Insights](sql/05_business_insights.sql)
+
+## Selected Analysis Results
+![Vehicle Claim Contribution](images/vehicle_claim_contribution.png)
+![State Risk Analysis](images/state_risk_analysis.png)
+![Claim Cost Concentration](images/claim_concentration.png)
+![Customer Risk Segmentation](images/customer_risk_segmentation.png)
+![Vehicle Risk Segmentation](images/vehicle_risk_segmentation.png)
+
+## Project Structure
+```text
+motor-claims-analysis/
+│
+├── README.md
+│
+├── images/
+│   ├── database_schema.png
+│   ├── vehicle_claim_contribution.png
+│   ├── customer_risk_segmentation.png
+│   ├── vehicle_risk_segmentation.png
+│   ├── state_risk_analysis.png
+│   └── claim_concentration.png
+│
+└── sql/
+    ├── 01_create_database.sql
+    ├── 02_exploratory_data_analysis.sql
+    ├── 03_business_questions.sql
+    ├── 04_advanced_analysis.sql
+    └── 05_business_insights.sql
